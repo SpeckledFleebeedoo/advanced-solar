@@ -1,0 +1,9 @@
+{
+    "name": "advanced-solar",
+    "version": "0.1.0",
+    "title": "Advanced solar",
+    "author": "SpeckledFleebeedoo",
+    "factorio_version": "1.0",
+    "dependencies": ["base >= 1.0"],
+    "description": "Adds a larger, stronger solar panel."
+}
