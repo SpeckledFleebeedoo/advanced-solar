@@ -37,7 +37,7 @@ data:extend(
         picture = 
         {
                 {
-                    filename = "__advanced-solar__/graphics/entity/big-solar-panel.png",
+                    filename = "__Speckled-advanced-solar__/graphics/entity/big-solar-panel.png",
                     priority = "high",
                     width = 320,
                     height = 320,
@@ -47,7 +47,7 @@ data:extend(
         overlay =
         {
             {
-                filename = "__advanced-solar__/graphics/entity/big-solar-panel-shadow.png",
+                filename = "__Speckled-advanced-solar__/graphics/entity/big-solar-panel-shadow.png",
                 priority = "high",
                 width = 347,
                 height = 304,
