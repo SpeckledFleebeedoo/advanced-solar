@@ -1,5 +1,6 @@
 local productionsetting = settings.startup["advanced-solar-production"].value
-local costfactor = math.floor(productionsetting / 60)
+local costfactor = math.floor(productionsetting / 60)       
+-- Calculates how much more this panel produces than a normal solar panel, used for recipe balancing.
 
 data:extend(
 {
