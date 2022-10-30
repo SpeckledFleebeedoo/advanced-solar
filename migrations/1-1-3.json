@@ -1,0 +1,22 @@
+{
+    "entity":
+    [
+        ["advanced-solar", "sf-advanced-solar"],
+        ["advanced-accumulator", "sf-advanced-accumulator"]
+    ],
+    "item":
+    [
+        ["advanced-solar", "sf-advanced-solar"],
+        ["advanced-accumulator", "sf-advanced-accumulator"]
+    ],
+    "technology":
+    [
+        ["advanced-solar", "sf-advanced-solar"],
+        ["advanced-accumulator", "sf-advanced-accumulator"]
+    ],
+    "recipe":
+    [
+        ["advanced-solar", "sf-advanced-solar"],
+        ["advanced-accumulator", "sf-advanced-accumulator"]
+    ]
+}

@@ -1,14 +1,62 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.1
-Date: 15.11.2020
-  Bugfixes:
-    - Fixed a naming error.
----------------------------------------------------------------------------------------------------
-Version: 0.1.2
-Date: 24.11.2020
+Version: 1.1.4
+Date: 2022-10-11
   Changes:
-    - Updated to 1.1.
-    - Renamed to be more concise.
+    - Added configuration for recipe cost.
+  Bugfixes:
+    - Fixed advanced solar panel entity not having a custom icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 11.02.2022
+  Bugfixes:
+    - Changed prototype names to avoid conflict with other mods.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 28.04.2021
+  Bugfixes:
+    - Fixed advanced accumulator not requiring accumulator research to unlock.
+    - Replaced chemical science requirement for advanced accumulator with production science, as this is used in the recipe.
+    - Removed unnecessary advanced electronics requirement for both advanced accumulator and solar panel.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 21.01.2021
+  Changes:
+    - 1.1 version with same features as 1.0.1.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 21.01.2021
+  Bugfixes:
+    - Fixed accumulator flow limits.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 21.01.2021
+  Changes:
+    - 1.1 version with same features as 0.1.0.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 21.01.2021
+  Changes:
+    - Added a 3x3 accumulator to match the solar panel.
+  Bugfixes:
+    - Fixed small issue in solar panel graphic.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 26.12.2020
+  Changes:
+    - 1.0 version with the same features as 0.1.5.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 26.12.2020
+  Changes:
+    - Fixed recipe balancing to be proportional to output, not area.
+    - Added rounding on production time.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 26.12.2020
+  Changes:
+    - Added setting to change output.
+    - Solar panel recipe now depends on output. (Higher output gives a more expensive panel).
+    - Advanced solar panels now take production science to unlock.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 24.11.2020
@@ -17,27 +65,13 @@ Date: 24.11.2020
     - Changed research name for consistency.
     - Added slight tint to icon to distinguish it from the base solar panel.
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.4
-Date: 26.12.2020
+Version: 0.1.2
+Date: 24.11.2020
   Changes:
-    - Added setting to change output.
-    - Solar panel recipe now depends on output. (Higher output gives a more expensive panel)
-    - Advanced solar panels now take production science to unlock.
+    - Updated to 1.1.
+    - Renamed to be more concise.
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.5
-Date: 26.12.2020
-  Changes:
-    - Fixed recipe balancing to be proportional to output, not area.
-    - Added rounding on production time.
----------------------------------------------------------------------------------------------------
-Version: 0.1.6
-Date: 26.12.2020
-  Changes:
-    - 1.0 version with the same features as 0.1.5
----------------------------------------------------------------------------------------------------
-Version: 0.1.0
-Date: 21.01.2020
-  Changes:
-    - Added a 3x3 accumulator to match the solar panel.
+Version: 0.1.1
+Date: 15.11.2020
   Bugfixes:
-    - Fixed small issue in solar panel graphic.
+    - Fixed a naming error.

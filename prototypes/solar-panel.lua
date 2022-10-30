@@ -1,20 +1,21 @@
-local productionsetting = settings.startup["advanced-solar-production"].value
-local costfactor = math.floor(productionsetting / 60)       
+local productionsetting = settings.startup["sf-advanced-solar-production"].value
+local costscaling = settings.startup["sf-advanced-solar-costscale"].value
+local costfactor = math.floor(productionsetting * costscaling / 60)
 -- Calculates how much more this panel produces than a normal solar panel, used for recipe balancing.
 
 data:extend(
 {
     {
         type = "recipe",
-        name = "advanced-solar",
+        name = "sf-advanced-solar",
         enabled = false,
         ingredients = {{"advanced-circuit", 20}, {"steel-plate",10}, {"solar-panel", costfactor}},
         energy_required = costfactor * 5,
-        result = "advanced-solar"
+        result = "sf-advanced-solar"
     },
     {
         type = "item",
-        name = "advanced-solar",
+        name = "sf-advanced-solar",
         icons = {
             {
                 icon = "__base__/graphics/icons/solar-panel.png",
@@ -25,18 +26,26 @@ data:extend(
             }
         },
         icon_size = 64,
-        place_result = "advanced-solar",
+        place_result = "sf-advanced-solar",
         stack_size = 100,
         subgroup = "energy",
         order = "d[solar-panel]-b[advanced-solar]"
     },
     {
         type = "solar-panel",
-        name = "advanced-solar",
-        icon = "__base__/graphics/icons/solar-panel.png",
+        name = "sf-advanced-solar",
+        icons = {
+            {
+                icon = "__base__/graphics/icons/solar-panel.png",
+            },
+            {
+                icon = "__base__/graphics/icons/solar-panel.png",
+                tint = {0, 0, 1, 0.001}
+            }
+        },
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation"},
-        minable = {hardness = 0.1, mining_time = 0.2, result = "advanced-solar"},
+        minable = {hardness = 0.1, mining_time = 0.2, result = "sf-advanced-solar"},
         max_health = 800,
         corpse = "solar-panel-remnants",
         collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -72,7 +81,7 @@ data:extend(
     
     {
         type = "technology",
-        name = "advanced-solar",
+        name = "sf-advanced-solar",
         icons = {
             {
                 icon = "__base__/graphics/technology/solar-energy.png",
@@ -83,8 +92,8 @@ data:extend(
             }
         },
         icon_size = 256, icon_mipmaps = 4,
-        effects = {{type = "unlock-recipe", recipe = "advanced-solar"}},
-        prerequisites = {"solar-energy", "advanced-electronics", "production-science-pack"},
+        effects = {{type = "unlock-recipe", recipe = "sf-advanced-solar"}},
+        prerequisites = {"solar-energy", "production-science-pack"},
         unit = {count=200, ingredients = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack",1},{"production-science-pack",1}}, time=30}
     }
 }

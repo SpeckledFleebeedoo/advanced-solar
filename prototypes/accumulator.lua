@@ -1,7 +1,8 @@
-local productionsetting = settings.startup["advanced-solar-production"].value
-local capacitysetting = (productionsetting / 60) * 5
-local chargespeedsetting = (productionsetting / 60) * 300
-local costfactor = math.floor(productionsetting / 60)
+local productionsetting = settings.startup["sf-advanced-solar-production"].value
+local costscaling = settings.startup["sf-advanced-solar-costscale"].value
+local capacitysetting = (productionsetting * costscaling / 60) * 5
+local chargespeedsetting = (productionsetting * costscaling / 60) * 300
+local costfactor = math.floor(productionsetting * costscaling / 60)
 -- Calculates how much more an item should cost compared to a standard accumulator.
 
 function advanced_accumulator_picture(tint, repeat_count)
@@ -125,15 +126,15 @@ data:extend(
 {
     {
       type = "recipe",
-      name = "advanced-accumulator",
+      name = "sf-advanced-accumulator",
       enabled = false,
       ingredients = {{"advanced-circuit", 10}, {"iron-plate",15}, {"accumulator", costfactor}},
       energy_required = costfactor * 5,
-      result = "advanced-accumulator"
+      result = "sf-advanced-accumulator"
     },
     {
         type = "item",
-        name = "advanced-accumulator",
+        name = "sf-advanced-accumulator",
         icons = {
           {
               icon = "__base__/graphics/icons/accumulator.png",
@@ -144,14 +145,14 @@ data:extend(
           }
         },
         icon_size = 64,
-        place_result = "advanced-accumulator",
+        place_result = "sf-advanced-accumulator",
         stack_size = 100,
         subgroup = "energy",
         order = "e[accumulator]-b[advanced-accumulator]"
     },
     {
         type = "accumulator",
-        name = "advanced-accumulator",
+        name = "sf-advanced-accumulator",
         icons = {
           {
               icon = "__base__/graphics/icons/accumulator.png",
@@ -163,7 +164,7 @@ data:extend(
         },
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation"},
-        minable = {hardness = 0.1, mining_time = 0.2, result = "advanced-accumulator"},
+        minable = {hardness = 0.1, mining_time = 0.2, result = "sf-advanced-accumulator"},
         max_health = 800,
         corpse = "accumulator-remnants",
         collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
@@ -173,8 +174,8 @@ data:extend(
           type = "electric",
           usage_priority = "tertiary",
           buffer_capacity = tostring(capacitysetting).."MJ",
-          input_flow_limit = tostring(chargespeedsetting).."MW",
-          output_flow_limit = tostring(chargespeedsetting).."MW"
+          input_flow_limit = tostring(chargespeedsetting).."kW",
+          output_flow_limit = tostring(chargespeedsetting).."kW"
         },
 
         picture = advanced_accumulator_picture(),
@@ -185,7 +186,7 @@ data:extend(
     },
     {
         type = "technology",
-        name = "advanced-accumulator",
+        name = "sf-advanced-accumulator",
         icons = {
           {
               icon = "__base__/graphics/technology/electric-energy-acumulators.png",
@@ -196,8 +197,8 @@ data:extend(
           }
         },
         icon_size = 256,
-        effects = {{type = "unlock-recipe", recipe = "advanced-accumulator"}},
-        prerequisites = {"solar-energy", "advanced-electronics", "chemical-science-pack"},
+        effects = {{type = "unlock-recipe", recipe = "sf-advanced-accumulator"}},
+        prerequisites = {"electric-energy-accumulators", "production-science-pack"},
         unit = {count=200, ingredients = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack",1},{"production-science-pack",1}}, time=30}
     }
 }
