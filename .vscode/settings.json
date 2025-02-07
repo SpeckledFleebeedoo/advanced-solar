@@ -1,0 +1,16 @@
+{
+    "factorio.versions": [
+        {
+            "name": "Factorio 2.0",
+            "factorioPath": "/home/Speckled/Factorio/Factorio_1.2/bin/x64/factorio",
+            "active": true
+        }
+    ],
+    "Lua.workspace.library": [
+        "/home/Speckled/Factorio/Factorio_1.2/data"
+    ],
+    "Lua.workspace.userThirdParty": [
+        "/home/Speckled/.config/Code/User/workspaceStorage/ea863ea1103ffcf4a468bf886549136a/justarandomgeek.factoriomod-debug/sumneko-3rd"
+    ],
+    "Lua.workspace.checkThirdParty": "ApplyInMemory"
+}

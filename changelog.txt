@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2024-10-13
+  Changes:
+    - Factorio 2.0 compatibility.
+    - Clean up charge and discharge animations.
+    - Add charge and discharge sounds.
+    - Add water reflection.
+    - Change default power output factor to 400 kW.
+    - Increase technology unlock cost.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2022-10-11
   Changes:

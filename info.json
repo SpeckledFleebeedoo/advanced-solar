@@ -1,9 +1,9 @@
 {
     "name": "Speckled-advanced-solar",
-    "version": "1.1.4",
+    "version": "2.0.0",
     "title": "SF advanced solar",
     "author": "SpeckledFleebeedoo",
-    "factorio_version": "1.1",
-    "dependencies": ["base >= 1.1"],
+    "factorio_version": "2.0",
+    "dependencies": ["base >= 2.0"],
     "description": "Adds a larger, stronger solar panel and matching accumulator."
 }
